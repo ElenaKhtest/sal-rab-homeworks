@@ -11,9 +11,9 @@ function calcShipping(sum, min, shipping) {
         shippingSum = 0;
     } 
     
-    
 
-    } else {
+
+    }else{
         shippingSum = shippingPrice;
     
     // Конец решения задания №2.1.
@@ -50,11 +50,11 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     let totalSum;
 
     totalSum = productsSum;
-    totalSum = (totalSum - discountSum);
+    totalSum = totalSum - discountSum;
 
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice); // не изменяйте эту строку!!!
 
-    totalSum = (totalSum + shippingSum);
+    totalSum = totalSum + shippingSum;
 
     let freeShipping;
     
