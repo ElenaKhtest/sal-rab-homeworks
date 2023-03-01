@@ -8,34 +8,29 @@ function calcShipping(sum, min, shipping) {
     let shippingSum;
 
     if (productsSum == 0 || productsSum >= freeShippingMinSum) {
-        shippingSum = 0;
-    } 
-    
-
-
+       shippingSum = 0;
     }else{
-        shippingSum = shippingPrice;
+       shippingSum = shippingPrice;
+    }
+
     
     // Конец решения задания №2.1.
 
     return shippingSum;
 }
 
-function calcDiscount(sum, min, discount) 
+function calcDiscount(sum, min, discount) { 
     let productsSum = sum; // сумма в корзине
     let discountMinSum = min; // минимальная сумма для скидки
-    let discountPart = discount; // величина скидки в процентах
+    let discountSum = discount; // величина скидки в процентах
 
     // Задание №2.2. Рассчитать скидку
 
-    let discountSum;
-
-    if (productsSum >= discountMinSum); 
-        discountPart = discountSum / 100 * productsSum;
-    else
-        discountSum = 0;
-       
-
+    if (productsSum >= discountMinSum){
+       discountSum = discountSum / 100 * productsSum;
+    }else{
+       discountSum = 0;
+    }
     // Конец решения задания №2.2.
 
     return discountSum;
